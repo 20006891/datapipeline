@@ -11,8 +11,9 @@ def fetch_repository_data(token):
     if response.status_code == 200:
         return response.json()
     else:
+        print(response.status_code)
         raise Exception('Failed to fetch repository data')
 
 # Call the function with GitHub access token
-repository_data = fetch_repository_data('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')
-print(repository_data)
+#repository_data = fetch_repository_data('pat-token')
+#print(repository_data)
