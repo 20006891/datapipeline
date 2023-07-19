@@ -15,5 +15,5 @@ def preprocess_data(repository_data):
 
 
 # Preprocess the repository data
-preprocessed_data = preprocess_data(fetch_repository_data('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'))
-print(preprocessed_data)
+#preprocessed_data = preprocess_data(fetch_repository_data('pat_token'))
+#print(preprocessed_data)
