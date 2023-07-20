@@ -1,6 +1,7 @@
 import pandas as pd
 from data_aquisition import fetch_repository_data
-#Pre processing the data
+
+#pre processing the data
 def preprocess_data(repository_data):
     repositories = repository_data['items']
     extracted_data = []
@@ -12,8 +13,3 @@ def preprocess_data(repository_data):
         })
     df = pd.DataFrame(extracted_data)
     return df
-
-
-# Preprocess the repository data
-#preprocessed_data = preprocess_data(fetch_repository_data('pat_token'))
-#print(preprocessed_data)

@@ -1,7 +1,6 @@
-
 import requests
 
-#Aquiring/gathering data through web scrapping
+#aquiring/gathering data through web scrapping
 def fetch_repository_data(token):
     headers = {
         'Authorization': f'Token {token}'
@@ -13,7 +12,3 @@ def fetch_repository_data(token):
     else:
         print(response.status_code)
         raise Exception('Failed to fetch repository data')
-
-# Call the function with GitHub access token
-#repository_data = fetch_repository_data('pat-token')
-#print(repository_data)

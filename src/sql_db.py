@@ -1,8 +1,6 @@
 import sqlite3
 import pandas as pd
 import os
-#from data_preprocessing import preprocess_data
-#from data_aquisition import fetch_repository_data
 
 def create_database(db_name):
     if os.path.exists(db_name):
@@ -43,8 +41,3 @@ def read_data_from_database(db_name):
     df = pd.read_sql_query(query, conn)
     conn.close()
     return df
-    
-# Create the database and load data
-#create_database('../db/github_data.db')
-#preprocessed_data = preprocess_data(fetch_repository_data('pat_token'))
-#load_data_to_database(preprocessed_data, '../db/github_data.db')

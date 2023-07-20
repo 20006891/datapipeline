@@ -3,9 +3,8 @@ import matplotlib.pyplot as plt
 from sql_db import read_data_from_database
 
 def draw_data_grpahs(db_name):
-    df = read_data_from_database(db_name)
-    #print(df)
-    # Plotting the number of repositories per language
+    df = read_data_from_database(db_name)   
+    # plotting the number of repositories per language
     plt.figure(figsize=(12, 6))
     plt.bar(df['language'], df['repository_count'])
     plt.xlabel('programming language')
@@ -14,7 +13,7 @@ def draw_data_grpahs(db_name):
     plt.xticks(rotation=90)
     plt.show()
 
-    # Plotting the distribution of star counts per language
+    # plotting the distribution of star counts per language
     plt.figure(figsize=(12, 6))
     plt.boxplot([df[df['language'] == lang]['avg_stars'] for lang in df['language']])
     plt.xlabel('programming Language')
@@ -22,7 +21,4 @@ def draw_data_grpahs(db_name):
     plt.title('distribution of star counts per language')
     plt.xticks(range(1, len(df['language']) + 1), df['language'], rotation=90)
     plt.show()
-
-# analyze the loaded data
-#draw_data_grpahs('../db/github_data.db')
 

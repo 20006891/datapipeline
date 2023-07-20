@@ -25,7 +25,7 @@ The GitHub API endpoint we use is:
 https://api.github.com/search/repositories?q=stars:>0&per_page=100
 
 - `q=stars:>0` specifies that we want to fetch repositories with at least one star.
-- `per_page=100` indicates that we want to retrieve 100 repositories per page. You can adjust this value based on your requirements.
+- `per_page=100` indicates that we want to retrieve 100 repositories per page.
 
 ### 2. Data Pre-processing
 
@@ -55,7 +55,7 @@ Matplotlib is used to create bar charts and box plots to visualize the analysis 
 
 2. Generate a personal access token from GitHub following the official documentation.
 
-3. Open the Python script `main.py` and replace `'github_pat_token'` in the `fetch_repository_data` function with your GitHub access token.
+3. Open the Python script `main.py` and replace `'github_pat_token'` in the `fetch_repository_data` function with valid GitHub access token.
 
 4. Run the Python script:
    python main.py
@@ -65,5 +65,5 @@ The script will execute the pipeline steps and provide the analysis results in t
 ## Conclusion
 
 This pipeline demonstrates a basic workflow for data acquisition, pre-processing, and data analysis using Python. 
-By extending and customizing the pipeline, you can apply it to different data sources and answer various questions of interest.
+By extending and customizing the pipeline, one can apply it to different data sources and answer various questions of interest.
 
