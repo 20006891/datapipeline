@@ -3,9 +3,10 @@ from data_aquisition import fetch_repository_data
 from sql_db import *
 from analyze_data import draw_data_grpahs
 
+github_pat_token = "pat_token"
 #github repository data aquisition through github web api
 #need to pass valid pat token here
-repository_data = fetch_repository_data("pat_token")
+repository_data = fetch_repository_data(github_pat_token)
 #preprocess the data to filter out required data
 preprocessed_data = preprocess_data(repository_data)
 #store the data into a sql database
