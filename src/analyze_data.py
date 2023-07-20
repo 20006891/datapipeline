@@ -2,9 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sql_db import read_data_from_database
 
-def analyze_data(db_name):
+def draw_data_grpahs(db_name):
     df = read_data_from_database(db_name)
-    print(df)
+    #print(df)
     # Plotting the number of repositories per language
     plt.figure(figsize=(12, 6))
     plt.bar(df['language'], df['repository_count'])
@@ -24,5 +24,5 @@ def analyze_data(db_name):
     plt.show()
 
 # analyze the loaded data
-#analyze_data('../db/github_data.db')
+#draw_data_grpahs('../db/github_data.db')
 
